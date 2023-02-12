@@ -118,13 +118,13 @@ public class MainViewModel extends ViewModel {
             result = Double.parseDouble(operand1.toString()) * Double.parseDouble(operand2.toString());
 
 
-        return operand1 + operator.toString() + operand2 + " = " + result;
+        return operand1 + operator.toString() + operand2 + " = " + fmt(result);
     }
 
-//    public static String fmt(double d) {
-//        if (d == (int) d)
-//            return String.format("%d", (int) d);
-//        else
-//            return String.format("%s", d);
-//    }
+    public static String fmt(double d) {
+        if (d == (int) d)
+            return String.format("%d", (int) d);
+        else
+            return String.format("%s", d);
+    }
 }
